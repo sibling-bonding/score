@@ -3,10 +3,10 @@ function loadJS(urls) {
         var script = document.createElement("script");
         script.type = "text/javascript";
         script.src = urls[0];
-        document.head.appendChild(script);
         script.onload = function(){
             loadJS(urls.slice(1));
         };
+        document.head.appendChild(script);
     }
 }
 
